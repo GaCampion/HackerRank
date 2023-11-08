@@ -1,0 +1,42 @@
+class Result {
+
+    /*
+     * Complete the 'countApplesAndOranges' function below.
+     *
+     * The function accepts following parameters:
+     *  1. INTEGER s start point house
+     *  2. INTEGER t end point house
+     *  3. INTEGER a apple tree
+     *  4. INTEGER b orange tree
+     *  5. INTEGER_ARRAY apples
+     *  6. INTEGER_ARRAY oranges
+     */
+
+    public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
+        
+        int appleCount = 0;
+        int orangeCount = 0;
+        
+        for(int i= 0; i < apples.size(); i++){
+            
+             int position = apples.get(i) + a;
+        if (position >= s && position <= t) {
+            appleCount++;
+        }
+        }
+        
+        for(int j= 0; j < oranges.size(); j++){
+            
+        int position = oranges.get(j) + b;
+        if (position >= s && position <= t) {
+            orangeCount++;
+        }
+        }
+        
+        System.out.println(appleCount);
+        System.out.println(orangeCount);
+        
+    }
+
+}
+
